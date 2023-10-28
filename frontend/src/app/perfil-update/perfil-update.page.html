@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>perfil-update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-item>
+  <ion-label position="floating">Tipo</ion-label>
+  <ion-input [(ngModel)]="perfil.tipo" name="tipo" type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Id_usuario</ion-label>
+  <ion-input [(ngModel)]="perfil.usuario" name="usuario" type="text"></ion-input>
+</ion-item>
+
+<ion-button (click)="updatePerfil()">Guardar Cambios</ion-button>
+
+</ion-content>

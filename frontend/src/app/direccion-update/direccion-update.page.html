@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>direccion-update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-item>
+  <ion-label position="floating">Calle</ion-label>
+  <ion-input [(ngModel)]="direccion.calle" name="calle" type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Ciudad</ion-label>
+  <ion-input [(ngModel)]="direccion.ciudad" name="ciudad" type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Id_usuario</ion-label>
+  <ion-input [(ngModel)]="direccion.usuario" name="usuario" type="text"></ion-input>
+</ion-item>
+
+<ion-button (click)="updateDireccion()">Guardar Cambios</ion-button>
+
+</ion-content>

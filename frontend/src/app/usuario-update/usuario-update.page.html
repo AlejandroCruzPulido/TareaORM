@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>usuario-update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-item>
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input [(ngModel)]="usuario.nombre" name="nombre" type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Email</ion-label>
+  <ion-input [(ngModel)]="usuario.email" name="email" type="text"></ion-input>
+</ion-item>
+
+<ion-button (click)="updateUsuario()">Guardar Cambios</ion-button>
+
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>direccion-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let d of direcciones">
+      <ion-label>
+        <h1>Calle: {{d.calle}}</h1>
+        Ciudad: {{d.ciudad}}
+        <p></p>
+        Usuario:
+        <p></p> 
+        Nombre: {{d.usuario.nombre}} 
+        <p></p>
+        Email:  {{d.usuario.email}}
+      </ion-label>
+      <ion-button (click)="editDireccion(d.id)">Modificar direccion</ion-button>
+      <ion-button (click)="deleteDireccion(d.id)">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content> 
+
+<ion-footer>
+  <ion-button (click)="gotoDireccionAdd()" expand="full">Añadir nueva direccion</ion-button>
+  <ion-button (click)="gotoHome()" expand="full">Volver al inicio</ion-button>    
+</ion-footer>

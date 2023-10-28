@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>perfil-add</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">perfil-add</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="floating">Tipo</ion-label>
+    <ion-input [(ngModel)]="tipo" name="tipo" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Id_Usuario</ion-label>
+    <ion-input [(ngModel)]="usuario" name="usuario" type="text"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="addPerfil()" expand="full">Añadir Perfil</ion-button>
+  <ion-button (click)="gotoPerfilList()" expand="full">Ver lista de perfiles</ion-button>
+</ion-content>
+
+  
+  

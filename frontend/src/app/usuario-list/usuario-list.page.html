@@ -1,0 +1,23 @@
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>usuario-list</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-list>
+      <ion-item *ngFor="let u of usuarios">
+        <ion-label>
+          <h1>Nombre: {{u.nombre}}</h1>
+          Email: {{u.email}}
+        </ion-label>
+        <ion-button (click)="editUsuario(u.id)">Modificar oferta</ion-button>
+        <ion-button (click)="deleteUsuario(u.id)">Eliminar</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-content> 
+
+  <ion-footer>
+    <ion-button (click)="gotoUsuarioAdd()" expand="full">Añadir nuevo usuario</ion-button>
+    <ion-button (click)="gotoHome()" expand="full">Volver al inicio</ion-button>    
+  </ion-footer>
